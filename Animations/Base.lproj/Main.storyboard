@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNG-CQ-hpf" customClass="AnimatedButton" customModule="Animations" customModuleProvider="target">
+                                <rect key="frame" x="132" y="423" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aX0-i3-GhV"/>
+                                    <constraint firstAttribute="width" constant="150" id="hmj-44-8nF"/>
+                                </constraints>
+                                <state key="normal" title="Presioname"/>
+                                <connections>
+                                    <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8IU-Zf-vII"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjc-zu-UMX" customClass="AnimatedView" customModule="Animations" customModuleProvider="target">
+                                <rect key="frame" x="20" y="542" width="374" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="B6O-1A-T8l"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thanos" translatesAutoresizingMaskIntoConstraints="NO" id="JvI-hM-TMf" customClass="AnimatedImageView" customModule="Animations" customModuleProvider="target">
+                                <rect key="frame" x="107" y="144" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="LJx-Tj-IpS"/>
+                                    <constraint firstAttribute="width" constant="200" id="ccS-2h-IfL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JvI-hM-TMf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="OAi-lz-ZGN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wjc-zu-UMX" secondAttribute="trailing" constant="20" id="QH1-L4-AMx"/>
+                            <constraint firstItem="JvI-hM-TMf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qcb-g9-Wb3"/>
+                            <constraint firstItem="wjc-zu-UMX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cVJ-j2-nIY"/>
+                            <constraint firstItem="DNG-CQ-hpf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mGy-FW-op5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wjc-zu-UMX" secondAttribute="bottom" constant="20" id="peR-j9-2xO"/>
+                            <constraint firstItem="DNG-CQ-hpf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wpE-LZ-aQk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animatedImageView" destination="JvI-hM-TMf" id="CQD-st-WBY"/>
+                        <outlet property="animatedViewBottomConstraint" destination="peR-j9-2xO" id="C3H-qb-kDe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="thanos" width="1920" height="2496"/>
+    </resources>
+</document>
